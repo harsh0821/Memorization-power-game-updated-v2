@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Result</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@600&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+    body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			background-color: #f5f5f5;
+		}
+
+		header {
+			background-color: transparent;
+			color: #fff;
+			padding: 1rem 0 1rem 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			z-index: 1;
+			font-family: 'Spectral', serif;
+
+			
+		}
+
+		header .logo {
+			margin-left: 2%;
+			padding: 0;
+			margin: 15px;
+			margin-top: 2%;;
+		}
+
+		header .menu-toggle {
+			display: none;
+			cursor: pointer;
+			padding: 1rem;
+            
+		}
+
+		header nav {
+            
+			flex: 1;
+			text-align: center;
+            
+		}
+
+		header ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		header li {
+			margin: 0 1rem;
+			
+		}
+
+		header a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			font-size: 1.2rem;
+			padding: 1rem;
+			transition: color 0.2s ease-in-out;
+		}
+
+		header a:hover {
+			color: black
+		}
+
+		.container {
+            position: relative;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: left;
+			margin: 2rem;
+            padding-top: 10%;
+            display: block;
+                       
+		}
+    .container1 {
+      
+      position: relative;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: left;
+			margin: 2rem;
+            padding-top: 5%;
+            display: block;
+    }
+    .container1 h3{
+      font-size: 1.5rem;
+			margin-bottom: 1rem;
+			text-align: left;
+			
+			word-spacing: 15px;
+			letter-spacing: 5px;
+			margin-left: 3vw;
+    }
+    .container1 .button {
+            position: absolute;
+			display: block;
+			background-color: transparent;
+			color: #fff;
+			margin-left: 3vw;
+			border: 3px solid #000;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            text-align: center;
+            white-space: nowrap;          
+            font-size: 1.5rem;
+			
+			cursor: pointer;
+            
+            transition: 1s;
+            overflow: hidden;
+            transition: color 0.4s linear;
+			font-family: 'Spectral', serif;
+			
+
+		}
+        .button:hover {
+            color: #fff;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: -1;
+            transition: transform 0.5s;
+            transform-origin: 0 0;
+            transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+            transform: scaleX(0);
+        }
+        .button:hover::before {
+            transform: scaleX(1);
+        }
+
+    
+
+
+
+    
+    .container h1 {          
+			font-size: 3.5rem;
+			margin-bottom: 1rem;
+			text-align: left;
+			
+			word-spacing: 20px;
+			letter-spacing: 5px;
+			margin-left: 3vw;
+    }
+    
+
+
+
+
+    #result {
+      font-size: 48px;
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      color: black;
+    }
+    #message {
+      font-size: 1.5rem;
+			margin-bottom: 2rem;
+			text-align: left;
+      color: #ffffff;
+			font-family: 'Poppins', sans-serif;
+			margin-left: 3vw;
+      
+    }
+
+
+    @media (max-width: 768px) {
+			header {
+				padding: 0;
+			}
+
+			header .menu-toggle {
+				display: block;
+				
+			}
+
+			header nav {
+				display: none;
+				position: absolute;
+				top: 4rem;
+				left: 0;
+				width: 100%;
+				background-color: #333;
+				padding: 1rem;
+			}
+
+			header nav.active {
+				
+				display: block;
+				text-align:right;
+				background-color: rgb(10,10,10, 0.8);
+			}
+
+			header ul {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			header li {
+				margin: 1rem 0;
+			}
+
+			header a {
+				display
+            }
+	}
+  @media (max-width: 1647px) {
+    .container {
+      margin-top: 13%;
+    }
+  }
+
+    
+
+
+
+
+
+  </style>
+</head>
+<body style="background-image:url('back2.jpg');">
+  <header>
+		<div class="logo">
+          <a href="index.html"><img src="logo.png" alt="Your Logo"></a>
+        </div>
+		<span class="menu-toggle">&#9776;</span>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="info.html">Info</a></li>
+			</ul>
+		</nav>
+	</header>
+  <main>
+
+    <div class="container">
+      <h1>You reached level -  <span id="result"></span></h1>
+      
+    </div>
+    <div class="container1">
+    
+      <span id="message"></span>
+    </div>
+
+
+    <div class="container1">
+    
+      <h3 id="help"> Wondering how to increase your memorization power ??<br> I think this can help....</h3>
+
+      <button class="button" data-abbr="START" onclick="window.open('https://www.healthline.com/health/how-to-improve-memory')"> <span>......Click.....</span>  </button>
+
+
+      
+    </div>
+
+
+        
+        
+    </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script>
+    document.getElementById("result").innerHTML=localStorage.getItem("final-level");
+   const resultEl = document.querySelector('#result');
+    const messageEl = document.querySelector('#message');
+
+
+
+    if (resultEl.textContent <= '2') {
+      messageEl.textContent = 'Try again, please. I think you were not paying attention.';
+    } 
+	else if (resultEl.textContent > '2' && resultEl.textContent <= '5') {
+      messageEl.textContent = 'Not good, it is below average, but I think you can do better. Come on, champ.';
+    }
+	else if (resultEl.textContent > '5' && resultEl.textContent <= '8') {
+      messageEl.textContent = 'You performed averagely, maybe try again.';
+    }
+	else if (resultEl.textContent > '8' && resultEl.textContent <= '10') {
+      messageEl.textContent = 'You performed above average, nice!';
+    }
+	else if (resultEl.textContent > '10' && resultEl.textContent <= '14')  {
+      messageEl.textContent = 'Now thats impressive, this score makes you better than 80% of people.';
+    }
+	else if (resultEl.textContent > '0')  {
+      messageEl.textContent = 'Read carefully, it says press any key on your keyboard to start, not click those buttons!!';
+    }
+	else {
+      messageEl.textContent = 'You can stop this game now, your ability to memorize is better than most of them out there. ';
+	  document.getElementsByClassName('button').style.visibility = 'hidden';
+	  document.getElementById('help').style.visibility = 'hidden';
+    }
+	
+
+    const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+    
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+  </script>
+</body>
+</html>
